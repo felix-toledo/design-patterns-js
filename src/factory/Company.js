@@ -1,3 +1,4 @@
+//Creamos clase developer.
 class Developer {
      constructor(name) {
           this.name = name;
@@ -5,6 +6,7 @@ class Developer {
      }
 }
 
+//Creamos clase tester.
 class Tester {
      constructor(name) {
           this.name = name;
@@ -12,12 +14,14 @@ class Tester {
      }
 }
 
+//Creamos clase company (su unica funcion es alojar empleados)
 export class Company{
      constructor(){
           this.employees = [];
      }
 }
 
+//Ahora utilizamos el patron de diseño factory para crear empleados.
 export class EmployeeFactory {
      constructor(company) {
           this.create = (nameOf, type) => {

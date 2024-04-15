@@ -18,7 +18,6 @@ export class Employee {
      }
  }
 
- ///////////////////////////////////////
 //Tenemos la funcion extrasalary que va a ser el visitor.
 export function ExtraSalary(emp){
      emp.setSalary(emp.getSalary() * 2);

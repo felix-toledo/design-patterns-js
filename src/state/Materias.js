@@ -1,10 +1,11 @@
-// Definimos la clase State que representa el estado del personaje
+// Definimos la clase State que representa una clase abstracta de el estado de la materia para que despues se herede.
 class State {
   constructor(materia) {
       this.stateName;
       this.materia = materia;
   }
 
+  //Métodos que tienen que ser implementados en las clases hijas.
   regular() {}
 
   desaprobar() {}
@@ -12,7 +13,7 @@ class State {
   promocionar() {}
 }
 
-// Definimos la clase Regular que hereda de State
+// Definimos la clase Regular que hereda de State.
 class Regular extends State {
   constructor(materia) {
       super(materia);
@@ -28,7 +29,7 @@ class Regular extends State {
   }
 }
 
-// Definimos la clase Desaprobar que hereda de State
+// Definimos la clase Desaprobar que hereda de State.
 class Desaprobar extends State {
   constructor(materia) {
       super(materia);
@@ -44,7 +45,7 @@ class Desaprobar extends State {
   }
 }
 
-// Definimos la clase Promocionar que hereda de State
+// Definimos la clase Promocionar que hereda de State.
 class Promocionar extends State {
   constructor(materia) {
       super(materia);
@@ -60,7 +61,7 @@ class Promocionar extends State {
   }
 }
 
-// Definimos la clase Materia que contiene el estado actual de la materia en base a las notas obtenidas
+// Definimos la clase Materia que contiene el estado actual de la materia en base a las notas obtenidas.
 export class Materia {
   constructor(name) {
       this.name = name;
