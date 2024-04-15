@@ -65,22 +65,22 @@ export class Materia {
   constructor(name) {
       this.name = name;
       this.state = new Regular(this);
-      this.notas = []; // Corregir la inicialización de notas como un array vacío
+      this.notas = []; 
   }
 
   agregarNotas(nota) {
       this.notas.push(nota);
       let total = 0;
       let estado;
-      for (let i = 0; i < this.notas.length; i++) { // Corregir len() a length y declarar i con let
+      for (let i = 0; i < this.notas.length; i++) { 
           total += this.notas[i];
-          if (i === this.notas.length - 1) { // Corregir la condición de final del bucle
+          if (i === this.notas.length - 1) { 
               total = total / (i + 1);
           }
       }
       if (total >= 7.5) {
           estado = this.promocionar();
-      } else if (total < 7.5 && total >= 5.5) { // Corregir la condición de rango de notas
+      } else if (total < 7.5 && total >= 5.5) { 
           estado = this.regular();
       } else if (total < 5.5) {
           estado = this.desaprobar();
